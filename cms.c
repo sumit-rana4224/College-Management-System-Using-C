@@ -37,6 +37,8 @@ char admin_p[20];
 int att;
 int reg_count_stud;
 int reg_count_faculty;
+int disp = 0;
+
 
 char *get_password()
 {
@@ -239,9 +241,11 @@ void add_student(student_data *temp)
             t = t->next_stud;
         t->next_stud = nws;
     }
-
-    puts("\033[1;32mStudent Added Successfully.");
-    printf("Student %s's Registration Number is: %d\n\033[0m", temp->name, temp->sreg_no);
+    if(disp)
+    {
+        puts("\033[1;32mStudent Added Successfully.");
+        printf("Student %s's Registration Number is: %d\n\033[0m", temp->name, temp->sreg_no);
+    }
 }
 void add_faculty(faculty_data *temp)
 {
@@ -260,9 +264,11 @@ void add_faculty(faculty_data *temp)
             t = t->next_faculty;
         t->next_faculty = nwf;
     }
-
-    puts("\033[1;32mFaculty Added Successfully.");
-    printf("Faculty %s's Registration Number is: %d\n\033[0m", temp->name, temp->freg_no);
+    if(disp)
+    {
+        puts("\033[1;32mFaculty Added Successfully.");
+        printf("Faculty %s's Registration Number is: %d\n\033[0m", temp->name, temp->freg_no);
+    }
 }
 
 void delete_student()
@@ -767,7 +773,14 @@ void faculty_login()
                 switch (choice)
                 {
                 case 1:
-                    printf("Name: %s, Reg No: %d, Salary: %d\n", t->addf->name, t->addf->freg_no, t->addf->salary);
+                    printf("Name        : %s\n", t->addf->name);
+                    printf("Reg No      : %d\n", t->addf->freg_no);
+                    printf("Salary      : %d\n", t->addf->salary);
+                    printf("12th Result : %.2f\n", t->addf->p2);
+                    printf("CGPA        : %.2f\n", t->addf->cgpa);
+                    printf("Father's Name: %s\n", t->addf->father_name);
+                    printf("State       : %s\n", t->addf->state);
+                    printf("District    : %s\n", t->addf->district);
                     break;
                 case 2:
                     upload_marks();
@@ -811,7 +824,17 @@ void student_login()
                 switch (choice)
                 {
                 case 1:
-                    printf("Name: %s, Reg No: %d, CGPA: %.2f\n", t->adds->name, t->adds->sreg_no, t->adds->cgpa);
+                    printf("Name       : %s\n", t->adds->name);
+                    printf("Reg No     : %d\n", t->adds->sreg_no);
+                    printf("Serial No  : %d\n", t->adds->sl_no);
+                    printf("CGPA       : %.2f\n", t->adds->cgpa);
+                    printf("12th Result: %.2f\n", t->adds->p2);
+                    printf("10th Result: %.2f\n", t->adds->boards);
+                    printf("Attendance : %.2f%%\n", t->adds->attendance);
+                    printf("State      : %s\n", t->adds->state);
+                    printf("District   : %s\n", t->adds->district);
+                    printf("Father's Name : %s\n", t->adds->father_name);
+                    printf("Fees Status   : %d\n", t->adds->fees);
                     break;
                 case 2:
                     see_marks(reg_no);
@@ -942,8 +965,10 @@ void load_all_data()
 
 int main()
 {
+
     load_all_data();
     load_admin_data();
+    disp=1;
     printf("\033[1;92m\n---- Welcome to College Management System ----\n\033[0m");
     int choice;
     while (1)

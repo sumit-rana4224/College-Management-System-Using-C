@@ -1,0 +1,17 @@
+=== Student Rankings ===
+Rank 1: Ankit Das Reg No: 47711120 - CGPA: 9.42
+Rank 2: Soumya Ranjan Rout Reg No: 47711116 - CGPA: 9.23
+Rank 3: Ramesh Nayak Reg No: 47711113 - CGPA: 9.13
+Rank 4: Tapan Sahu Reg No: 47711124 - CGPA: 9.01
+Rank 5: Debaprasad Mahakud Reg No: 47711210 - CGPA: 8.78
+Rank 6: Aloka Das Reg No: 47711123 - CGPA: 8.73
+Rank 7: Subham Sahu Reg No: 47711118 - CGPA: 8.73
+Rank 8: Binayak Panda Reg No: 47711111 - CGPA: 8.69
+Rank 9: Priyadarshan Panda Reg No: 47711121 - CGPA: 8.64
+Rank 10: Laxman Pradhan Reg No: 47711125 - CGPA: 8.56
+Rank 11: Aman Mishra Reg No: 47711112 - CGPA: 8.51
+Rank 12: Avijit Patra Reg No: 47711117 - CGPA: 8.42
+Rank 13: Pritam Behera Reg No: 47711115 - CGPA: 8.11
+Rank 14: Nilesh Swain Reg No: 47711122 - CGPA: 7.99
+Rank 15: Sourav Das Reg No: 47711114 - CGPA: 7.98
+Rank 16: Manas Nayak Reg No: 47711119 - CGPA: 7.83
